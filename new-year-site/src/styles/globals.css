@@ -1,0 +1,90 @@
+body {
+  background-color: #020617;
+  font-family: "Comic Neue", cursive;
+}
+
+.background-gradient {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      #0f172a 0%,
+      #020617 40%,
+      #020617 100%
+    );
+  z-index: 0;
+}
+
+
+/* Moon */
+.moon_outer {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #e6e0e0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.details {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.6);
+}
+
+.details.one { top: 15px; left: 30px; width: 15px; height: 15px; }
+.details.two { top: 45px; left: 10px; width: 15px; height: 15px; }
+.details.three { top: 50px; left: 50px; width: 15px; height: 15px; }
+.details.four.small { top: 30px; left: 45px; width: 8px; height: 8px; }
+
+/* Stars */
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+#stars span {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle linear infinite;
+}
+
+
+
+@keyframes twinkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+:root {
+  --ring-size: min(40vw, 140px);
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 6;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: rgb(236, 72, 153);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.05s linear;
+}
